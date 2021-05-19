@@ -1,13 +1,7 @@
 package com.enterprise.bytedance;
 
-public class TreeNode {
-    public int val;
-    public TreeNode left, right;
-    public TreeNode(int val) {
-        this.val = val;
-        this.left = this.right = null;
-    }
-}
+import com.common.entity.TreeNode;
+
 /**
  * <b>Description</b>
  * <p>
@@ -24,5 +18,14 @@ public class InsertNodeInABinarySearchTree {
      */
     public TreeNode insertNode(TreeNode root, TreeNode node) {
         // write your code here
+        if (root == null) {
+            return node;
+        }
+        if (root.val > node.val) {
+            root.left = insertNode(root.left, node);
+        } else {
+            root.right = insertNode(root.right, node);
+        }
+        return root;
     }
 }

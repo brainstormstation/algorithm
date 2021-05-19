@@ -1,13 +1,6 @@
 package com.enterprise.bytedance;
 
-public class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-}
+import com.common.entity.ListNode;
 
 /**
  * <b>Description</b>
