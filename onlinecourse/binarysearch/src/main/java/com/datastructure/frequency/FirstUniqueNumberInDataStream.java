@@ -1,5 +1,59 @@
 package com.datastructure.frequency;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.common.entity.ListNode;
+
+class DataStream {
+    private ListNode head, tail;
+    private HashMap<Integer, ListNode> numToPrev;
+    private Set<Integer> duplicates;
+    
+    public DataStream() {
+        head = new ListNode(0);
+        tail = head;
+
+        numToPrev = new HashMap<>();
+        duplicates = new HashSet<>();
+    }
+
+    public void remove(int num) {
+        ListNode pre = numToPrev.get(num);
+        pre.next = pre.next.next;
+        numToPrev.remove(num);
+
+        if (pre.next != null) {
+            numToPrev.put(pre.next.val, pre);
+        } else {
+            tail = pre;
+        }
+    }
+
+    public void add(int num) {
+        if (duplicates.contains(num)) {
+            return;
+        }
+
+        if (numToPrev.containsKey(num)) {
+            remove(num);
+            duplicates.add(num);
+        } else {
+            ListNode node = new ListNode(num);
+            numToPrev.put(num, tail);
+            tail.next = node;
+            tail = node;
+        }
+    }
+
+    public int firstUnique() {
+        if (head.next != null) {
+            return head.next.val;
+        }
+        return -1;
+    }
+}
 /**
  * <b>Description</b>
  * <p>
@@ -17,5 +71,13 @@ public class FirstUniqueNumberInDataStream {
      */
     public int firstUniqueNumber(int[] nums, int number) {
         // Write your code here
+        DataStream ds = new DataStream();
+        for (int i=0; i<nums.length; i++) {
+            ds.add(nums[i]);
+            if ( nums[i] == number) {
+                return ds.firstUnique();
+            }
+        }
+        return -1;
     }
 }
