@@ -1,14 +1,5 @@
 package com.datastructure.divideconquar;
 
-public class TreeNode {
-    public int val;
-    public TreeNode left, right;
-    public TreeNode(int val) {
-        this.val = val;
-        this.left = this.right = null;
-    }
- }
-
 /**
  * <b>Description</b>
  * <p>
