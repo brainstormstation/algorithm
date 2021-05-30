@@ -1,5 +1,7 @@
 package com.datastructure.divideconquar;
 
+import com.common.entity.TreeNode;
+
 /**
  * <b>Description</b>
  * <p>

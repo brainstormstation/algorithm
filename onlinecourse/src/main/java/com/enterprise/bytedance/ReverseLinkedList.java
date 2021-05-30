@@ -16,7 +16,7 @@ public class ReverseLinkedList {
      */
     public ListNode reverse(ListNode head) {
         // write your code here
-        ListNode pre = null
+        ListNode pre = null;
         while (head != null) {
             ListNode tmp = head.next;
             head.next = pre;

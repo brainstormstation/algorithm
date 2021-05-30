@@ -1,7 +1,7 @@
 package com.datastructure.divideconquar;
 
 import java.util.Stack;
-
+import com.common.entity.TreeNode;
 
 /**
  * <b>Description</b>
