@@ -1,6 +1,8 @@
 package com.msb.basic.sorting;
 
 
+import static org.junit.Assert.assertArrayEquals;
+
 import com.testutil.TestUtil;
 
 import org.junit.Before;
@@ -19,5 +21,7 @@ public class BubbleSortTest {
         int[] arr = new int[] {2,4,1,5,20,12,53,4,8};
         this.target.bubbleSort(arr);
         TestUtil.printArr(arr);
+        int[] expect = new int[] {1, 2, 4, 4, 5, 8, 12, 20, 53};
+        assertArrayEquals(expect, arr);
     }
 }

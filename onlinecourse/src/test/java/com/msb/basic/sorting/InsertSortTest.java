@@ -1,5 +1,7 @@
 package com.msb.basic.sorting;
 
+import static org.junit.Assert.assertArrayEquals;
+
 import com.testutil.TestUtil;
 
 import org.junit.Before;
@@ -18,6 +20,8 @@ public class InsertSortTest {
         int[] arr = new int[] {23, 2, 3, 10, 29, 0, 4, 38};
         this.target.insertSort(arr);
         TestUtil.printArr(arr);
+        int[] expect = new int[] {0, 2, 3, 4, 10, 23, 29, 38};
+        assertArrayEquals(expect, arr);
     }
 
     @Test
@@ -25,5 +29,7 @@ public class InsertSortTest {
         int[] arr = new int[] {23, 2, 3, 10, 29, 0, 4, 38};
         this.target.insertSort2(arr);
         TestUtil.printArr(arr);
+        int[] expect = new int[] {0, 2, 3, 4, 10, 23, 29, 38};
+        assertArrayEquals(expect, arr);
     }
 }
