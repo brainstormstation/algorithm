@@ -1,4 +1,4 @@
-package com.datastructure.dfs;
+package com.lintcode.datastructure.dfs;
 
 import java.util.ArrayList;
 import java.util.Arrays;
