@@ -1,4 +1,4 @@
-package com.datastructure.binarysearch;
+package com.lintcode.datastructure.binarysearch;
 
 /**
  * https://www.lintcode.com/problem/159/?_from=ladder&fromId=161"

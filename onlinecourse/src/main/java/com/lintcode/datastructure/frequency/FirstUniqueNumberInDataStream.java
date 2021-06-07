@@ -1,10 +1,10 @@
-package com.datastructure.frequency;
+package com.lintcode.datastructure.frequency;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.common.entity.ListNode;
+import com.lintcode.common.entity.ListNode;
 
 class DataStream {
     private ListNode head, tail;

@@ -1,4 +1,4 @@
-package com.datastructure.bfs;
+package com.lintcode.datastructure.bfs;
 
 import java.security.DigestException;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.datastructure.twopointers;
+package com.lintcode.datastructure.twopointers;
 
 public class QuickSortTemplate {
     public void quickSort(int[] nums, int left, int right) {

@@ -1,4 +1,4 @@
-package com.datastructure.twopointers;
+package com.lintcode.datastructure.twopointers;
 
 /**
  * <b>Description<b>

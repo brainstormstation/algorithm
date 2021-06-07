@@ -1,4 +1,4 @@
-package com.datastructure.bfs;
+package com.lintcode.datastructure.bfs;
 
 import java.util.ArrayList;
 import java.util.HashMap;

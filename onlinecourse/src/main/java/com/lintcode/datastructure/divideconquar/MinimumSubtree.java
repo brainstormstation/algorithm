@@ -1,6 +1,6 @@
-package com.datastructure.divideconquar;
+package com.lintcode.datastructure.divideconquar;
 
-import com.common.entity.TreeNode;
+import com.lintcode.common.entity.TreeNode;
 /**
  * <b>Description</b>
  * <p>

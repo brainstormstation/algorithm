@@ -1,4 +1,4 @@
-package com.datastructure.binarysearch;
+package com.lintcode.datastructure.binarysearch;
 
 /**
  * Given n books and the i-th book has pages[i] pages. There are k persons to copy these books.

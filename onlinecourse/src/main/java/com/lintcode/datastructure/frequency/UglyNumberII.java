@@ -1,4 +1,4 @@
-package com.datastructure.frequency;
+package com.lintcode.datastructure.frequency;
 
 import java.util.HashSet;
 import java.util.PriorityQueue;

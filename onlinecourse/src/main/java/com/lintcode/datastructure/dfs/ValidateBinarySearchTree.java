@@ -1,8 +1,6 @@
-package com.datastructure.dfs;
+package com.lintcode.datastructure.dfs;
 
-import javax.naming.spi.DirStateFactory.Result;
-
-import com.common.entity.TreeNode;
+import com.lintcode.common.entity.TreeNode;
 
 /**
  * <b>Description</b>

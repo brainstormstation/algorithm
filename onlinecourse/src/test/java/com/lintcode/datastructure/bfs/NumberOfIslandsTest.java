@@ -1,8 +1,6 @@
-package com.datastructure.bfs;
+package com.lintcode.datastructure.bfs;
 
 import static org.junit.Assert.assertEquals;
-
-import com.datastructure.bfs.NumberOfIslands;
 
 import org.junit.Before;
 import org.junit.Test;

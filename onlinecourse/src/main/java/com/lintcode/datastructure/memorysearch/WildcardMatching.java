@@ -1,4 +1,4 @@
-package com.datastructure.memorysearch;
+package com.lintcode.datastructure.memorysearch;
 
 /**
  * <b>Description</b>

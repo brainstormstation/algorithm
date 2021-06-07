@@ -1,4 +1,4 @@
-package com.datastructure.memorysearch;
+package com.lintcode.datastructure.memorysearch;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.datastructure.binarysearch;
+package com.lintcode.datastructure.binarysearch;
 
 /**
  *  https://www.lintcode.com/problem/first-position-of-target/description"
