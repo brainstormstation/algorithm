@@ -1,8 +1,8 @@
 package com.lintcode.common.entity;
 
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
     ListNode(int x) {
         val = x;
         next = null;
