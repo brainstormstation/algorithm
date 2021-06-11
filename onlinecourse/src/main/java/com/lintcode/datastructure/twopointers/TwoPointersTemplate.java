@@ -1,4 +1,4 @@
-package com.datastructure.twopointers;
+package com.lintcode.datastructure.twopointers;
 
 /**
  * 相向指针 (patition in quicksort)

@@ -1,6 +1,6 @@
-package com.enterprise.bytedance;
+package com.lintcode.enterprise.bytedance;
 
-import com.common.entity.ListNode;
+import com.lintcode.common.entity.ListNode;
 
 /**
  * <b>Description</b>

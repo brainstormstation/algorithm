@@ -1,7 +1,6 @@
-package com.datastructure.frequency;
+package com.lintcode.datastructure.frequency;
 
 import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
 

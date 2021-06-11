@@ -1,9 +1,6 @@
-package com.datastructure.divideconquar;
+package com.lintcode.datastructure.divideconquar;
 
 import static org.junit.Assert.assertTrue;
-
-import com.datastructure.divideconquar.LowestCommonAncestorOfABinaryTree;
-
 import org.junit.Before;
 import org.junit.Test;
 

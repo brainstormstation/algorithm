@@ -1,6 +1,5 @@
 package com.lintcode.datastructure.bfs;
 
-import java.security.DigestException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;

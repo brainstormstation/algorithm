@@ -1,10 +1,7 @@
-package com.datastructure.frequency;
+package com.lintcode.datastructure.twopointers;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.datastructure.SubarraySum;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

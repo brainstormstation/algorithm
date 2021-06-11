@@ -1,11 +1,8 @@
-package com.datastructure.bfs;
+package com.lintcode.datastructure.bfs;
 
 import static org.junit.Assert.assertEquals;
 
 import java.util.HashSet;
-
-import com.datastructure.bfs.WordLadder;
-
 import org.junit.Before;
 import org.junit.Test;
 

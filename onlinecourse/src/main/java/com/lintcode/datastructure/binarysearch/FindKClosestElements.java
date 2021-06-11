@@ -1,6 +1,12 @@
 package com.lintcode.datastructure.binarysearch;
 
 /**
+ * <b>Description</b>
+ * <p>
+ * Given target, a non-negative integer k and an integer array A sorted in ascending order, 
+ * find the k closest numbers to target in A, sorted in ascending order by the difference between the number and target. 
+ * Otherwise, sorted in ascending order by number if the difference is same.
+ * <p>
  * https://www.lintcode.com/problem/460/?_from=ladder&fromId=161
  */
 public class FindKClosestElements {

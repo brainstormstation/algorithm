@@ -1,8 +1,5 @@
-package com.datastructure.binarysearch;
+package com.lintcode.datastructure.binarysearch;
 import static org.junit.Assert.assertEquals;
-
-import com.datastructure.binarysearch.BinarySearchTemplate;
-
 import org.junit.Before;
 import org.junit.Test;
 

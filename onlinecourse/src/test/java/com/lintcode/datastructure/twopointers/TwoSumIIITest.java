@@ -1,8 +1,6 @@
-package com.datastructure.twopointers;
+package com.lintcode.datastructure.twopointers;
 
 import static org.junit.Assert.assertTrue;
-
-import com.datastructure.twopointers.TwoSumIII;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com.datastructure.frequency;
+package com.lintcode.datastructure.frequency;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,10 +1,7 @@
-package com.datastructure.dfs;
+package com.lintcode.datastructure.dfs;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.datastructure.dfs.WordSearchII;
-
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,5 +1,6 @@
-package com.enterprise.bytedance;
+package com.lintcode.enterprise.bytedance;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**

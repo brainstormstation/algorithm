@@ -1,4 +1,4 @@
-package com.enterprise.bytedance;
+package com.lintcode.enterprise.bytedance;
 
 /**
  * <b>Description</b>
