@@ -1,13 +1,7 @@
-package com.datastructure.twopointers;
+package com.lintcode.datastructure.twopointers;
 
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
-
-import java.util.Arrays;
 import java.util.List;
-
-import com.datastructure.twopointers.ThreeSum;
-
 import org.junit.Before;
 import org.junit.Test;
 
