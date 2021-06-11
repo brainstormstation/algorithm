@@ -1,8 +1,6 @@
 package com.msb.basic.startup;
 
 import static org.junit.Assert.assertArrayEquals;
-
-import com.msb.basic.startup.InsertSort;
 import com.testutil.TestUtil;
 
 import org.junit.Before;

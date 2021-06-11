@@ -2,8 +2,6 @@ package com.msb.basic.startup;
 
 import static org.junit.Assert.assertTrue;
 
-import com.msb.basic.startup.PrintIntBinary;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,6 +18,7 @@ public class PrintIntBinaryTest {
         String result = this.target.getBinaryStr(Integer.MAX_VALUE);
         System.out.println(Math.pow(2.00,3.00));
         System.out.println(result);
+        assertTrue("This is true", true);
     }
     
 }

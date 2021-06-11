@@ -77,8 +77,7 @@ public class InsertDeleteGetRandom {
      */
     public int getRandom() {
         // write your code here
-        int random = this.random.nextInt(list.size());
-        return list.get(random);
+        return list.get(this.random.nextInt(list.size()));
     }
     
 }

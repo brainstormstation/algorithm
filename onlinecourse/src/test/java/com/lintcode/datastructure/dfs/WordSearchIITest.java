@@ -1,5 +1,7 @@
 package com.lintcode.datastructure.dfs;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Before;
@@ -28,7 +30,9 @@ public class WordSearchIITest {
         words.add("can");
         words.add("again");
 
-        List<String> result = this.target.wordSearchII(board, words);
+        this.target.wordSearchII(board, words);
+        assertTrue(true);
+
     }
     
 }
