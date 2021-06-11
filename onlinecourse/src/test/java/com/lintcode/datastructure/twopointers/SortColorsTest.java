@@ -1,9 +1,6 @@
-package com.datastructure.twopointers;
+package com.lintcode.datastructure.twopointers;
 
 import static org.junit.Assert.assertArrayEquals;
-
-import com.datastructure.twopointers.SortColors;
-
 import org.junit.Before;
 import org.junit.Test;
 
