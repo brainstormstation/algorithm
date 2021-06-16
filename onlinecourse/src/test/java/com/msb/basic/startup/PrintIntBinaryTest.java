@@ -20,5 +20,12 @@ public class PrintIntBinaryTest {
         System.out.println(result);
         assertTrue("This is true", true);
     }
+
+    @Test
+    public void testGetBinaryStr1() {
+        String result = this.target.getBinaryStr(46);
+        System.out.println(result);
+        assertTrue("This is true", true);
+    }
     
 }
