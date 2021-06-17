@@ -15,6 +15,18 @@ public class BitCalculation {
         // a - b => a +(-b) => a+ (~b+1)
         return add(a, negNum(b));
     }
+
+    public int multi(int a, int b) {
+        int res = 0;
+        while (b != 0) {
+            if ((b & 1) != 0) {
+                res = add(a, res);
+            }
+            a <<= 1;
+            b >>>= 1; // 不带符号右移
+        }
+        return res;
+    }
     
     public int negNum(int num) {
         return add(~num, 1);

@@ -30,4 +30,22 @@ public class BitCalculationTest {
         int result = this.target.minus(a, b);
         assertEquals(expected, result);
     }
+
+    @Test
+    public void testMulti() {
+        int a = (int)Math.random();
+        int b = (int)Math.random();
+        int expected = a * b;
+        int result = this.target.multi(a, b);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testMultiWithNegNumber() {
+        int a = (int)Math.random();
+        int b = -(int)Math.random();
+        int expected = a * b;
+        int result = this.target.multi(a, b);
+        assertEquals(expected, result);
+    }
 }
