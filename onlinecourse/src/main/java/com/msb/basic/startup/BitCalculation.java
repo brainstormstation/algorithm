@@ -28,6 +28,45 @@ public class BitCalculation {
         return res;
     }
     
+    private boolean isNeg(int a) {
+        return a < 0;
+    }
+
+    private int div(int a, int b) {
+        int x = isNeg(a) ? negNum(a) : a;
+        int y = isNeg(b) ? negNum(b) : b;
+        int res = 0;
+        for (int i=30; i>=0; i = minus(i, 1)) {
+            if ((x >> i) >= y) {
+                res |= (1 << i);
+                x = minus(x, y << i);
+            }
+        }
+        return isNeg(a) ^ isNeg(b) ? negNum(res) : res;
+
+    }
+
+    public int divide(int a, int b) {
+        if (a == Integer.MIN_VALUE && b == Integer.MIN_VALUE) {
+            return 1;
+        } else if (b == Integer.MIN_VALUE) {
+            return 0;
+        } else if (a == Integer.MIN_VALUE) {
+            if (b == negNum(1)) {
+                return Integer.MAX_VALUE;
+            } else {
+                // a / b
+                // (a+1) / b = c
+                // a - (b * c) = d
+                // d / b = e
+                // c + e
+                int c = div(add(a, 1), b);
+                return add (c, div(minus(a, multi(c, b)), b));
+            }
+        } else {
+            return div(a, b);
+        }
+    }
     public int negNum(int num) {
         return add(~num, 1);
     }
