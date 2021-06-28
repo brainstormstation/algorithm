@@ -9,7 +9,7 @@ public class MergeSort {
         sort(a, 0, a.length-1);
     }
 
-    public void sort(int[] a, int left, int right) {
+    private void sort(int[] a, int left, int right) {
         if (left == right) {
             return;
         }
@@ -17,6 +17,30 @@ public class MergeSort {
         sort(a, left, mid);
         sort(a, mid+1, right);
         merge(a, left, mid, right);
+    }
+
+    public void mergeSort1(int[] a) {
+        if (a == null || a.length ==0) {
+            return;
+        }
+        int step = 1;
+        int n = a.length;
+        while (step < n) {
+            int left = 0;
+            while (left < n) {
+                if (step >= n - left) {
+                    break;
+                }
+                int mid = left + step -1;
+                int right = mid + Math.min(step, n - mid -1);
+                merge(a, left, mid, right);
+                left = right + 1;
+            }
+            if (step > (n >> 1)) {
+                break;
+            }
+            step <<= 1;
+        }
     }
 
     private void merge(int[] arr, int left, int middle, int right) {

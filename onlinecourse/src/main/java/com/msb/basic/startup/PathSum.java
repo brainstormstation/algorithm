@@ -1,7 +1,5 @@
 package com.msb.basic.startup;
 
-import java.util.List;
-
 import com.lintcode.common.entity.TreeNode;
 
 public class PathSum {
