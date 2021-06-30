@@ -6,5 +6,4 @@ public class UtilFunc {
         arr[i] = arr[j];
         arr[j] = tmp;
     }
-    
 }
