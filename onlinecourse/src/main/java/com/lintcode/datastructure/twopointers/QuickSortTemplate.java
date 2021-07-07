@@ -16,7 +16,7 @@ public class QuickSortTemplate {
 
         int start = left;
         int end = right;
-        int pivot = start + (end - start) /2;
+        int pivot = nums[(start + end) >>> 1];
         while (start <= end) {
             while (start <= end && nums[start] < nums[pivot]) {
                 start ++;
