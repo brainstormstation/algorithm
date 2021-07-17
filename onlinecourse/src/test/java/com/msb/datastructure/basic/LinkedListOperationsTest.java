@@ -49,5 +49,44 @@ public class LinkedListOperationsTest {
         }
 
     }
+
+    @Test
+    public void testLoopNode() {
+        ListNode list1 = TestUtil.generateRandomLinkList(6, 100);
+        ListNode list2 = TestUtil.generateRandomLinkList(8, 100);
+        ListNode tail1 = list1;
+        while (tail1.next!=null) {
+            tail1 = tail1.next;
+        }
+        ListNode tail2 = list2;
+        while (tail2.next != null) {
+            tail2 = tail2.next;
+        }
+        tail1.next = list2;
+        tail2.next = tail1;
+        
+        ListNode p = target.getLoopNode(list1);
+        assertTrue(p == tail1);
+
+    }
+
+    @Test
+    public void testGetCrossNodeNoCircle() {
+        ListNode list1 = TestUtil.generateRandomLinkList(6, 100);
+        ListNode list2 = TestUtil.generateRandomLinkList(3, 100);
+        ListNode t2 = list2;
+        while (t2.next != null) {
+            t2 = t2.next;
+        }
+        int count = (int)(5 * Math.random());
+        ListNode t1 = list1;
+        while (count > 0) {
+            t1 = t1.next;
+            count--;
+        }
+        t2.next = t1;
+        ListNode node = this.target.getCrossNodeNoCircle(list1, list2);
+        assertTrue(node == t1);
+    }
     
 }

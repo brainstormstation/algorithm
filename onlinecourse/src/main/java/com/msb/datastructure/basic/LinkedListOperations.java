@@ -195,4 +195,57 @@ public class LinkedListOperations {
 
     }
     
+    public ListNode getLoopNode(ListNode head) {
+        if (head == null || head.next == null || head.next.next == null) {
+            return head;
+        }
+
+        ListNode slow = head.next;
+        ListNode fast = head.next.next;
+        while (slow != fast) {
+            if (fast.next == null || fast.next.next == null) {
+                return null;
+            }
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        fast = head;
+        while (slow != fast) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+    public ListNode getCrossNodeNoCircle(ListNode p1, ListNode p2) {
+        int count = 0;
+        ListNode t1 = p1;
+        while (t1.next != null) {
+            t1 = t1.next;
+            count++;
+        }
+        ListNode t2 = p2;
+        while (t2.next != null) {
+            t2 = t2.next;
+            count--;
+        }
+        
+        // 不相交
+        if (t1 != t2) {
+            return null;
+        }
+
+        ListNode l = count > 0? p1 : p2;
+        ListNode s = count > 0? p2: p1;
+        count = Math.abs(count);
+        while (count > 0) {
+            l = l.next;
+            count --;
+        }
+        while (l != s) {
+            l = l.next;
+            s = s.next;
+        }
+        return l;
+    }
 }
