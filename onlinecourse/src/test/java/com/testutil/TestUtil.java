@@ -29,4 +29,14 @@ public class TestUtil {
         }
         return head;
     }
+
+    public static TreeNode generateBinaryTree(int size, ) {
+        TreeNode root = new TreeNode()
+        for (int i=0; i<level; i++) {
+            int nodes = 2 << i;
+            for (int j = 0; j<nodes; j++) {
+                
+            }
+        }
+    }
 }
