@@ -203,4 +203,36 @@ public class BinaryTreeOperations {
         return new MaxDistanceInfo(height, maxDistance);
 
     }
+
+    class FullBSTInfo {
+        int nodes;
+        int height;
+        public FullBSTInfo(int nodes, int height) {
+            this.nodes = nodes;
+            this.height = height;
+        }
+    }
+
+    public boolean isFullBST(TreeNode node) {
+        if (node == null) {
+            return true;
+        }
+
+        FullBSTInfo info = fullBSTProcess(node);
+
+        return (1 << info.height) == info.nodes;
+    }
+
+    private FullBSTInfo fullBSTProcess(TreeNode node) {
+        if (node == null) {
+            return new FullBSTInfo(0, 0);
+        }
+        FullBSTInfo left = fullBSTProcess(node.left);
+        FullBSTInfo right = fullBSTProcess(node.right);
+
+        int height = Math.max(left.height, right.height)+1;
+        int nodes = left.nodes + right.nodes +1;
+        return new FullBSTInfo(nodes, height);
+    }
+
 }
