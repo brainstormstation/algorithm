@@ -5,7 +5,21 @@ public class Hanoi {
         leftToRight(n);
     }
 
-    public void leftToRight(int n) {
+    public void hanoi2(int n) {
+        func(n, "left", "right", "mid");
+    }
+
+    private void func(int n, String from, String to, String other) {
+        if (n==1) {
+            System.out.println("Move 1 from "+from+" to "+to);
+            return;
+        }
+        func(n-1, from, other, to);
+        System.out.println("Move "+n+" from "+from+" to "+to);
+        func(n-1, other, to, from);
+    }
+
+    private void leftToRight(int n) {
         if (n==1) {
             System.out.println("Move 1 from left to right");
             return;
@@ -14,8 +28,9 @@ public class Hanoi {
         System.out.println("Move "+n+" from left to right");
         midToRight(n-1);
     }
+    
 
-    public void leftToMid(int n) {
+    private void leftToMid(int n) {
         if (n == 1) {
             System.out.println("Move 1 from left to mid");
             return;

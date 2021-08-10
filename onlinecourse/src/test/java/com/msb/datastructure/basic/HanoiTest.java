@@ -15,7 +15,13 @@ public class HanoiTest {
 
     @Test
     public void testHanoi1() {
-        target.leftToRight(4);
+        target.hanoi1(4);
+        assertTrue(true);
+    }
+
+    @Test
+    public void testHanoi2() {
+        target.hanoi2(3);
         assertTrue(true);
     }
 }
