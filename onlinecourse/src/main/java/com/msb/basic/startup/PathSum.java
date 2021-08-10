@@ -1,6 +1,6 @@
 package com.msb.basic.startup;
 
-import com.lintcode.common.entity.TreeNode;
+import com.common.entity.TreeNode;
 
 public class PathSum {
     

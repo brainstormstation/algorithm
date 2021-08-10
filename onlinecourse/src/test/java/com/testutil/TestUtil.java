@@ -1,5 +1,6 @@
 package com.testutil;
 
+import com.common.entity.TreeNode;
 import com.lintcode.common.entity.ListNode;
 
 public class TestUtil {
@@ -30,13 +31,17 @@ public class TestUtil {
         return head;
     }
 
-    public static TreeNode generateBinaryTree(int size, ) {
-        TreeNode root = new TreeNode()
-        for (int i=0; i<level; i++) {
-            int nodes = 2 << i;
-            for (int j = 0; j<nodes; j++) {
-                
-            }
+    public static TreeNode generateBinaryTree(int maxLevel, int maxValue) {
+        return generate(1, maxLevel, maxValue);
+    }
+
+    private static TreeNode generate(int level, int maxLevel, int maxValue) {
+        if (level > maxLevel || Math.random() < 0.5) {
+            return null;
         }
+        TreeNode head = new TreeNode((int)(maxValue * Math.random()));
+        head.left = generate(level+1, maxLevel, maxValue);
+        head.right = generate(level+1, maxLevel, maxValue);
+        return head;
     }
 }

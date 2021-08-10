@@ -4,8 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-import com.lintcode.common.entity.TreeNode;
-import com.msb.basic.startup.IsBinarySearchTree;
+import com.common.entity.TreeNode;
 
 public class BinaryTreeOperations {
     public void preOrder(TreeNode root) {

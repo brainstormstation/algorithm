@@ -1,4 +1,4 @@
-package com.lintcode.common.entity;
+package com.common.entity;
 
 public class TreeNode {
     public int val;

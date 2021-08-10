@@ -1,6 +1,6 @@
 package com.lintcode.datastructure.dfs;
 
-import com.lintcode.common.entity.TreeNode;
+import com.common.entity.TreeNode;
 
 /**
  * <b>Description</b>

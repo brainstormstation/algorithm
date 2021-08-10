@@ -1,6 +1,6 @@
 package com.lintcode.enterprise.bytedance;
 
-import com.lintcode.common.entity.TreeNode;
+import com.common.entity.TreeNode;
 
 /**
  * <b>Description</b>
