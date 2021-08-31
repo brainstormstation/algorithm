@@ -1,4 +1,4 @@
-package com.msb.basic.startup;
+package com.msb.datastructure.startup;
 
 public class BitMap {
     private long[] bits;

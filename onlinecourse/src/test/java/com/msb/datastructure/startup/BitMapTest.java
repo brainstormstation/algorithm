@@ -1,9 +1,11 @@
-package com.msb.basic.startup;
+package com.msb.datastructure.startup;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.HashSet;
+
+import com.msb.datastructure.startup.BitMap;
 
 import org.junit.Test;
 

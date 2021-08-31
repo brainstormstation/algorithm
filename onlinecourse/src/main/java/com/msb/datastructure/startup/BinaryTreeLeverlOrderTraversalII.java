@@ -1,4 +1,4 @@
-package com.msb.basic.startup;
+package com.msb.datastructure.startup;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

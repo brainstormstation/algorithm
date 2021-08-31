@@ -1,4 +1,4 @@
-package com.msb.basic.startup;
+package com.msb.datastructure.startup;
 
 public class PrintIntBinary {
     public String getBinaryStr(int num) {

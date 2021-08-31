@@ -1,4 +1,4 @@
-package com.msb.basic.startup;
+package com.msb.datastructure.startup;
 
 import com.util.UtilFunc;
 
