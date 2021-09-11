@@ -43,5 +43,20 @@ public class KnapsackTest {
         // assert 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testGetMaxValueDp() {
+        // arrange
+        int[] w = new int[] {2, 4, 3, 10, 6};
+        int[] v = new int[] {10, 5, 2, 9, 12};
+        int bag = 15;
+        int expected = 29;
+
+        // act
+        int actual = this.target.getMaxValueInDp(w, v, bag);
+
+        // assert 
+        assertEquals(expected, actual);
+    }
     
 }
