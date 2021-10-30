@@ -1,5 +1,9 @@
 package com.testutil;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.common.entity.Node;
 import com.common.entity.TreeNode;
 import com.lintcode.common.entity.ListNode;
 
@@ -31,6 +35,33 @@ public class TestUtil {
         return head;
     }
 
+    // for test
+	public static Node generateRandomLinkedList(int len, int value) {
+		int size = (int) (Math.random() * (len + 1));
+		if (size == 0) {
+			return null;
+		}
+		size--;
+		Node head = new Node((int) (Math.random() * (value + 1)));
+		Node pre = head;
+		while (size != 0) {
+			Node cur = new Node((int) (Math.random() * (value + 1)));
+			pre.next = cur;
+			pre = cur;
+			size--;
+		}
+		return head;
+	}
+
+    public static List<Integer> getLinkedListOriginOrder(Node head) {
+		List<Integer> ans = new ArrayList<>();
+		while (head != null) {
+			ans.add(head.val);
+			head = head.next;
+		}
+		return ans;
+	}
+    
     public static TreeNode generateBinaryTree(int maxLevel, int maxValue) {
         return generate(1, maxLevel, maxValue);
     }

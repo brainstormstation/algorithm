@@ -1,13 +1,6 @@
 package com.msb.datastructure.basic;
 
-import java.util.TreeMap;
-
 public class HashOperations {
-    public void runTreeMap() {
-        TreeMap<Integer, String> map = new TreeMap<>();
-        
-        
-    }
 
     public static void main(String... args) {
         int lo = Integer.MAX_VALUE >> 1;
