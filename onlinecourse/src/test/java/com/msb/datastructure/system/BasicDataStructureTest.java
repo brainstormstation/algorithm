@@ -22,7 +22,7 @@ public class BasicDataStructureTest {
     {        
         int len = 20;
         int value = 100;
-        Node node = TestUtil.generateRandomLinkedList(len, value);
+        ListNode node = TestUtil.generateRandomLinkedList(len, value);
 		List<Integer> list2 = TestUtil.getLinkedListOriginOrder(node);
 		node = target.reverseLinkedList(node);
 		for (int i = list2.size() - 1; i >= 0; i--) {
@@ -32,12 +32,12 @@ public class BasicDataStructureTest {
         assertTrue("True", true);
     }
 
-    private Node testReverseLinkedList(Node head)
+    private ListNode testReverseLinkedList(ListNode head)
     {
         if (head == null) {
             return null;
         }
-        ArrayList<Node> list = new ArrayList<>();
+        ArrayList<ListNode> list = new ArrayList<>();
         while (head != null) {
             list.add(head);
             head = head.next;
