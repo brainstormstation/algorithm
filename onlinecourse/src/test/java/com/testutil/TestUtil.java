@@ -3,9 +3,8 @@ package com.testutil;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.common.entity.Node;
+import com.common.entity.ListNode;
 import com.common.entity.TreeNode;
-import com.lintcode.common.entity.ListNode;
 
 public class TestUtil {
     public static void printArr(int[] arr) {
@@ -36,16 +35,16 @@ public class TestUtil {
     }
 
     // for test
-	public static Node generateRandomLinkedList(int len, int value) {
+	public static ListNode generateRandomLinkedList(int len, int value) {
 		int size = (int) (Math.random() * (len + 1));
 		if (size == 0) {
 			return null;
 		}
 		size--;
-		Node head = new Node((int) (Math.random() * (value + 1)));
-		Node pre = head;
+		ListNode head = new ListNode((int) (Math.random() * (value + 1)));
+		ListNode pre = head;
 		while (size != 0) {
-			Node cur = new Node((int) (Math.random() * (value + 1)));
+			ListNode cur = new ListNode((int) (Math.random() * (value + 1)));
 			pre.next = cur;
 			pre = cur;
 			size--;
@@ -53,7 +52,7 @@ public class TestUtil {
 		return head;
 	}
 
-    public static List<Integer> getLinkedListOriginOrder(Node head) {
+    public static List<Integer> getLinkedListOriginOrder(ListNode head) {
 		List<Integer> ans = new ArrayList<>();
 		while (head != null) {
 			ans.add(head.val);

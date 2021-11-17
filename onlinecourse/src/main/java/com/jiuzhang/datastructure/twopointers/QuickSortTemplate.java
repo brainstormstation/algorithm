@@ -1,4 +1,4 @@
-package com.lintcode.datastructure.twopointers;
+package com.jiuzhang.datastructure.twopointers;
 
 public class QuickSortTemplate {
 

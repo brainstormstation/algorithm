@@ -1,16 +1,16 @@
 package com.msb.datastructure.system;
 
 import com.common.entity.DoubleNode;
-import com.common.entity.Node;
+import com.common.entity.ListNode;
 
 public class BasicDataStructure {
-    public Node reverseLinkedList(Node node) {
+    public ListNode reverseLinkedList(ListNode node) {
         if (node == null || node.next == null) {
             return node;
         }
 
-        Node pre = null;
-        Node next = null;
+        ListNode pre = null;
+        ListNode next = null;
         while (node != null) {
             next = node.next;
             node.next = pre;
@@ -20,7 +20,7 @@ public class BasicDataStructure {
         return pre;
     }
 
-    public Node removeValue(Node head, int val) {
+    public ListNode removeValue(ListNode head, int val) {
         if (head == null) {
             return head;
         }
@@ -29,8 +29,8 @@ public class BasicDataStructure {
             head = head.next;
         }
 
-        Node pre = head;
-        Node cur = head;
+        ListNode pre = head;
+        ListNode cur = head;
         while (cur != null) {
             if (cur.val == val) {
                 pre.next = cur.next;                

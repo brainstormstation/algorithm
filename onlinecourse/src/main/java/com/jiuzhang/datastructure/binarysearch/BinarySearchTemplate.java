@@ -1,4 +1,4 @@
-package com.lintcode.datastructure.binarysearch;
+package com.jiuzhang.datastructure.binarysearch;
 
 public class BinarySearchTemplate {
     public int binarySearch(int[] nums, int target) {

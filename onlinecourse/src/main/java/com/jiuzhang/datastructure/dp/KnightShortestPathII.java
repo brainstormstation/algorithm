@@ -1,4 +1,4 @@
-package com.lintcode.datastructure.dp;
+package com.jiuzhang.datastructure.dp;
 
 /**
  * <b>Description</b>

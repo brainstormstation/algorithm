@@ -1,4 +1,4 @@
-package com.lintcode.datastructure.binarysearch;
+package com.jiuzhang.datastructure.binarysearch;
 
 /**
  * <a href="https://www.lintcode.com/problem/458/" />

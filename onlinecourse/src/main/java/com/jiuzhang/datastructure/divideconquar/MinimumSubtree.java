@@ -1,4 +1,4 @@
-package com.lintcode.datastructure.divideconquar;
+package com.jiuzhang.datastructure.divideconquar;
 
 import com.common.entity.TreeNode;
 /**

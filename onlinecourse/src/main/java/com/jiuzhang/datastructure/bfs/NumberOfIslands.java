@@ -1,4 +1,4 @@
-package com.lintcode.datastructure.bfs;
+package com.jiuzhang.datastructure.bfs;
 
 import java.util.LinkedList;
 import java.util.Queue;

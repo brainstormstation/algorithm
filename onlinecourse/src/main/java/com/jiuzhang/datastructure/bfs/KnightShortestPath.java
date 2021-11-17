@@ -1,4 +1,4 @@
-package com.lintcode.datastructure.bfs;
+package com.jiuzhang.datastructure.bfs;
 
 import java.util.HashMap;
 import java.util.LinkedList;

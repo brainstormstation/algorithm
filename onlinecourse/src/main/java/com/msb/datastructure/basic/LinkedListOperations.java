@@ -2,8 +2,8 @@ package com.msb.datastructure.basic;
 
 import java.util.HashMap;
 
-import com.lintcode.common.entity.DoubleNode;
-import com.lintcode.common.entity.ListNode;
+import com.common.entity.DoubleNode;
+import com.common.entity.ListNode;
 
 public class LinkedListOperations {
     public ListNode reverseLinkList(ListNode node) {
@@ -24,7 +24,7 @@ public class LinkedListOperations {
         while (head != null) {
             next = head.next;
             head.next = pre;
-            head.last = next;
+            head.pre = next;
             pre = head;
             head = next;
         }

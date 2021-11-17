@@ -1,4 +1,4 @@
-package com.lintcode.enterprise.bytedance;
+package com.enterprise.bytedance;
 
 /**
  * <b>Description</b>
@@ -15,7 +15,8 @@ public class ValidAnagram {
      */
     public boolean anagram(String s, String t) {
         // write your code here
-        int cor = 0, hash = 0;
+        int cor = 0;
+        int hash = 0;
         for (char c: s.toCharArray()) {
             cor^= c;
             hash += c * c % 26;

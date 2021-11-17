@@ -1,13 +1,14 @@
-package com.lintcode.datastructure.frequency;
+package com.jiuzhang.datastructure.frequency;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.lintcode.common.entity.ListNode;
+import com.common.entity.ListNode;
 
 class DataStream {
-    private ListNode head, tail;
+    private ListNode head;
+    private ListNode tail;
     private HashMap<Integer, ListNode> numToPrev;
     private Set<Integer> duplicates;
     
