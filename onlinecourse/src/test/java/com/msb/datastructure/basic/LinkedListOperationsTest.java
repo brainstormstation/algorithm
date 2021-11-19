@@ -2,7 +2,7 @@ package com.msb.datastructure.basic;
 
 import static org.junit.Assert.assertTrue;
 
-import com.lintcode.common.entity.ListNode;
+import com.common.entity.ListNode;
 import com.testutil.TestUtil;
 
 import org.junit.Before;

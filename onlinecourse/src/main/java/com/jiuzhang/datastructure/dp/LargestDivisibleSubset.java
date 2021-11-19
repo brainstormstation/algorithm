@@ -1,4 +1,4 @@
-package com.lintcode.datastructure.dp;
+package com.jiuzhang.datastructure.dp;
 
 import java.util.ArrayList;
 import java.util.Arrays;

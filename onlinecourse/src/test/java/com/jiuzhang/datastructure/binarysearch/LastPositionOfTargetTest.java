@@ -1,4 +1,4 @@
-package com.lintcode.datastructure.binarysearch;
+package com.jiuzhang.datastructure.binarysearch;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
