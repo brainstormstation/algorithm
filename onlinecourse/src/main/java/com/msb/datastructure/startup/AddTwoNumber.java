@@ -1,6 +1,7 @@
 package com.msb.datastructure.startup;
 
-import com.lintcode.common.entity.ListNode;
+import com.common.entity.ListNode;
+
 /**
  * <b>Description</b>
  * <p>

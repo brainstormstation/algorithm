@@ -1,4 +1,4 @@
-package com.lintcode.datastructure.bfs;
+package com.jiuzhang.datastructure.bfs;
 
 import static org.junit.Assert.assertEquals;
 
