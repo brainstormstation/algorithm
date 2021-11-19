@@ -1,7 +1,7 @@
 package com.msb.datastructure.startup;
 
-import com.lintcode.common.entity.DoubleNode;
-import com.lintcode.common.entity.ListNode;
+import com.common.entity.DoubleNode;
+import com.common.entity.ListNode;
 
 public class ReverseLinkedList {
     
@@ -23,7 +23,7 @@ public class ReverseLinkedList {
         while (node != null) {
             next = node.next;
             node.next = pre;
-            node.last = next;
+            node.pre = next;
             pre = node;
             node = next;
         }
