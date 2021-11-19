@@ -2,7 +2,7 @@ package com.msb.datastructure.system;
 
 import com.common.entity.TreeNode;
 
-public class BinaryTreeOperation {
+public class BinaryTree_isBalance {
     class Info {
         public boolean isBalance;
         public int height;
@@ -35,6 +35,6 @@ public class BinaryTreeOperation {
 
     }
 
-    
+
     
 }
