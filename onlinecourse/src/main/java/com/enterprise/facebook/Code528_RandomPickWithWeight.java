@@ -7,11 +7,11 @@ package com.enterprise.facebook;
  * For example, if w = [1, 3], the probability of picking index 0 is 1 / (1 + 3) = 0.25 (i.e., 25%), and the probability of picking index 1 is 3 / (1 + 3) = 0.75 (i.e., 75%).
  */
 public class Code528_RandomPickWithWeight {
-    public Solution(int[] w) {
+    public Code528_RandomPickWithWeight(int[] w) {
         
     }
     
     public int pickIndex() {
-        
+        return 0;
     }
 }

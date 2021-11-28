@@ -1,4 +1,4 @@
-package com.lintcode.datastructure.memorysearch;
+package com.jiuzhang.datastructure.memorysearch;
 
 import static org.junit.Assert.assertTrue;
 
