@@ -1,4 +1,4 @@
-package com.lintcode.datastructure.divideconquar;
+package com.jiuzhang.datastructure.divideconquar;
 
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;

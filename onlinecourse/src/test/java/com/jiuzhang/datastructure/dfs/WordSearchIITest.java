@@ -1,4 +1,4 @@
-package com.lintcode.datastructure.dfs;
+package com.jiuzhang.datastructure.dfs;
 
 import static org.junit.Assert.assertTrue;
 
