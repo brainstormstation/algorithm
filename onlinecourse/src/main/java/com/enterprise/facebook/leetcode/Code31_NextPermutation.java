@@ -1,4 +1,4 @@
-package com.enterprise.facebook;
+package com.enterprise.facebook.leetcode;
 
 /**
  * Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
@@ -34,7 +34,7 @@ public class Code31_NextPermutation {
 
         swap(nums, i, j);
 
-        reverse(nums,i);
+        reverse(nums,i+1);
     }
 
     private void swap(int[] arr,int i,int j){
