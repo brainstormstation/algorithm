@@ -1,4 +1,4 @@
-package com.enterprise.facebook;
+package com.enterprise.facebook.leetcode;
 
 import java.util.HashMap;
 

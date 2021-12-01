@@ -1,4 +1,4 @@
-package com.enterprise.facebook;
+package com.enterprise.facebook.leetcode;
 
 /**
  * Given n non-negative integers representing an elevation map where the width of each bar is 1, 

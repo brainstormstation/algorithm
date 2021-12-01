@@ -1,4 +1,4 @@
-package com.enterprise.facebook;
+package com.enterprise.facebook.leetcode;
 
 public class Code680_ValidPalindromeII {
     public boolean validPalindrome(String s) {

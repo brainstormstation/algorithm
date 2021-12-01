@@ -1,4 +1,4 @@
-package com.enterprise.facebook;
+package com.enterprise.facebook.leetcode;
 
 public class Code50_Pow {
     public double myPow(double x, int n) {

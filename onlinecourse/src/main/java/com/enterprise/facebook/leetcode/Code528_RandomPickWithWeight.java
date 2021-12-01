@@ -1,4 +1,4 @@
-package com.enterprise.facebook;
+package com.enterprise.facebook.leetcode;
 
 /**
  * You are given a 0-indexed array of positive integers w where w[i] describes the weight of the ith index.

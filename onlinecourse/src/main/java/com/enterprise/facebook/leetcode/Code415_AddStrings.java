@@ -1,4 +1,4 @@
-package com.enterprise.facebook;
+package com.enterprise.facebook.leetcode;
 
 public class Code415_AddStrings {
     public String addStrings(String num1, String num2) {
