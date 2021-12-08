@@ -7,6 +7,14 @@ import com.common.entity.ListNode;
 import com.common.entity.TreeNode;
 
 public class TestUtil {
+    public static char[][] ConvertFromStringToChar(String[] strings) {
+        char[][] result = new char[strings.length][strings[0].length()];
+        int i = 0;
+        for (String str: strings) {
+            result[i++] = str.toCharArray();
+        }
+        return result;
+    }
     public static void printArr(int[] arr) {
         for (int i: arr) {
             System.out.print(i);
