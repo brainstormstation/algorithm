@@ -16,10 +16,10 @@ public class BinaryTreeOperations {
                 root = stack.pop();
                 System.out.println(root.val);
                 if (root.right != null) {
-                    stack.push(root.left);
+                    stack.push(root.right);
                 }
                 if (root.left != null) {
-                    stack.push(root.right);
+                    stack.push(root.left);
                 }
             }
         }
