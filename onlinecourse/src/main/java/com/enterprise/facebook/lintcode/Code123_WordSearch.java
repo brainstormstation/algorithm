@@ -1,7 +1,5 @@
 package com.enterprise.facebook.lintcode;
 
-import java.util.*;
-
 /**
  * https://www.lintcode.com/problem/123
  * Description
