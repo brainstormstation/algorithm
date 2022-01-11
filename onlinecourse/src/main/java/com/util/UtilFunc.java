@@ -6,4 +6,8 @@ public class UtilFunc {
         arr[j] = arr[i] ^ arr[j];
         arr[i] = arr[i] ^ arr[j];
     }
+
+    public static boolean isBadVersion(int k, int n) {
+        return k == n;
+    }
 }
