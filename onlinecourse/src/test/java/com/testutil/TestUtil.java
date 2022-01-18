@@ -1,12 +1,51 @@
 package com.testutil;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import com.common.entity.ListNode;
 import com.common.entity.TreeNode;
 
 public class TestUtil {
+
+    public static TreeNode findNode(TreeNode root, TreeNode target) {
+        if (root != null && root.val == target.val) {
+            return root;
+        }
+
+        if (root != null) {
+            TreeNode left = findNode(root.left, target);
+            if (left != null) {
+                return left;
+            }
+            TreeNode right = findNode(root.right, target);
+            if (right != null) {
+                return right;
+            }
+        }
+        return null;
+    }
+
+    public static TreeNode createTreeNode(String[] arrays) {             
+        TreeNode root = new TreeNode(Integer.valueOf(arrays[0]));
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        int index = 1;
+        while (!queue.isEmpty() && index<arrays.length) {
+            TreeNode node = queue.poll();
+            if (arrays[index]!="#") {
+                node.left = new TreeNode(Integer.valueOf(arrays[index]));
+                queue.offer(node.left);
+            }
+            index++;
+            if (arrays[index]!="#") {
+                node.right = new TreeNode(Integer.valueOf(arrays[index]));
+                queue.offer(node.right);
+            }
+            index++;
+        }
+        return root;
+    }
+
     public static char[][] ConvertFromStringToChar(String[] strings) {
         char[][] result = new char[strings.length][strings[0].length()];
         int i = 0;
@@ -82,4 +121,5 @@ public class TestUtil {
         head.right = generate(level+1, maxLevel, maxValue);
         return head;
     }
+    
 }
