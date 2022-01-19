@@ -2,7 +2,6 @@ package com.msb.datastructure.basic;
 
 import static org.junit.Assert.assertEquals;
 
-import java.beans.BeanProperty;
 import java.util.Stack;
 
 import org.junit.Before;
