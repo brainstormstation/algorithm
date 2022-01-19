@@ -46,6 +46,14 @@ public class TestUtil {
         return root;
     }
 
+    public static TreeNode createTreeNode(Integer[] arr) {
+        String[] strArr = new String[arr.length];
+        for (int i=0; i<arr.length; i++) {
+            strArr[i] = arr[i] == null?"#":String.valueOf(arr[i]);
+        }
+        return createTreeNode(strArr);
+    }
+
     public static char[][] ConvertFromStringToChar(String[] strings) {
         char[][] result = new char[strings.length][strings[0].length()];
         int i = 0;

@@ -4,9 +4,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.HashSet;
-
-import com.msb.datastructure.startup.BitMap;
-
 import org.junit.Test;
 
 public class BitMapTest {

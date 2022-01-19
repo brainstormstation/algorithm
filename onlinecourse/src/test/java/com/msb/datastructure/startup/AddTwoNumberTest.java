@@ -3,7 +3,6 @@ package com.msb.datastructure.startup;
 import static org.junit.Assert.assertEquals;
 
 import com.common.entity.ListNode;
-import com.msb.datastructure.startup.AddTwoNumber;
 
 import org.junit.Before;
 import org.junit.Test;

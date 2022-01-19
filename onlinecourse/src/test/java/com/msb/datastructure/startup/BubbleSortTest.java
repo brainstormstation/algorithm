@@ -3,7 +3,6 @@ package com.msb.datastructure.startup;
 
 import static org.junit.Assert.assertArrayEquals;
 
-import com.msb.datastructure.startup.BubbleSort;
 import com.testutil.TestUtil;
 
 import org.junit.Before;

@@ -1,7 +1,5 @@
 package com.msb.datastructure.startup;
 
-import com.msb.datastructure.startup.MergeSort;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

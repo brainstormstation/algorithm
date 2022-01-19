@@ -1,5 +1,7 @@
 package com.enterprise.facebook.lintcode;
 
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Before;
 import org.junit.Test;
 

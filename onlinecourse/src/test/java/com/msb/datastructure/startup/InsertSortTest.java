@@ -2,7 +2,6 @@ package com.msb.datastructure.startup;
 
 import static org.junit.Assert.assertArrayEquals;
 
-import com.msb.datastructure.startup.InsertSort;
 import com.testutil.TestUtil;
 
 import org.junit.Before;
