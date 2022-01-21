@@ -7,31 +7,27 @@ public class Code52_NextPermutation {
      */
     public int[] nextPermutation(int[] nums) {
         // write your code here
-        if (nums == null || nums.length == 0) {
-            return null;
+        // write your code here
+        if (nums == null || nums.length < 2) {
+            return nums;
         }
 
         int i = nums.length - 2;
-        for (; i>=0; i--) {
-            if (nums[i]<nums[i+1]) {
-                break;
-            }
+        while (i>=0 && nums[i]>=nums[i+1]) {
+            i--;
         }
 
-        if (i == -1) {
-            reverse(nums, 0, nums.length-1);
+        if (i<0) {
+            reverse(nums, 0);
+            return nums;
         }
 
-        int j = nums.length-1;
-        for (; j>i;j--) {
-            if (nums[j]>nums[i]) {
-                break;
-            }
+        int j = nums.length - 1;
+        while (j>i && nums[j]<=nums[i]) {
+            j--;
         }
         swap(nums, i, j);
-
-        reverse(nums, i+1, nums.length-1);
-
+        reverse(nums, i+1);
         return nums;
     }
 
@@ -41,7 +37,8 @@ public class Code52_NextPermutation {
         nums[i] = nums[i] ^ nums[j];
     }
 
-    private void reverse(int[] nums, int start, int end) {
+    private void reverse(int[] nums, int start) {
+        int end = nums.length-1;
         while (start < end) {
             swap(nums, start, end);
             start++;
