@@ -37,7 +37,7 @@ public class TestUtil {
                 queue.offer(node.left);
             }
             index++;
-            if (arrays[index]!="#") {
+            if (index<arrays.length && arrays[index]!="#") {
                 node.right = new TreeNode(Integer.valueOf(arrays[index]));
                 queue.offer(node.right);
             }
