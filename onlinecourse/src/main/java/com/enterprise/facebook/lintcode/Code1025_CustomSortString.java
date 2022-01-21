@@ -1,8 +1,5 @@
 package com.enterprise.facebook.lintcode;
 
-import java.util.HashMap;
-import java.util.PriorityQueue;
-
 /**
  * https://www.lintcode.com/problem/1025/
  */
@@ -32,11 +29,5 @@ public class Code1025_CustomSortString {
             }
         }
         return ans.toString();
-    }
-
-    private void swap(char[] chars, int i, int j) {
-        char tmp = chars[i];
-        chars[i] = chars[j];
-        chars[j] = tmp;
     }
 }
