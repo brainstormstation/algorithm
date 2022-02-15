@@ -1,6 +1,6 @@
 package com.enterprise.facebook.lintcode;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * Description
@@ -10,18 +10,7 @@ import java.util.List;
  * There may be multiple correct orders, you just need to return one of them. If it is impossible to finish all courses, return an empty array.
  */
 public class Code616_CourseScheduleII {
-    class ClassNode {
-        int val;
-        List<ClassNode> prerequists;
-        public ClassNode(int val) {
-            this.val = val;
-        }
-
-        public void add(int requists) {
-            ClassNode re = new ClassNode(requists);
-            prerequists.add(re);
-        }
-    }
+    
     /*
      * @param numCourses: a total of n courses
      * @param prerequisites: a list of prerequisite pairs
@@ -29,7 +18,43 @@ public class Code616_CourseScheduleII {
      */
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         // write your code here
-        
+        Map<Integer, List<Integer>> graph = new HashMap<>();
+        int[] indegrees = new int[numCourses];
+        for (int[] prerequisite: prerequisites) {
+            if (graph.containsKey(prerequisite[1])) {
+                graph.get(prerequisite[1]).add(prerequisite[0]);
+            } else {
+                List<Integer> course = new ArrayList<>();
+                course.add(prerequisite[0]);
+                graph.put(prerequisite[1], course);
+            }
+            indegrees[prerequisite[0]]++;
+        }
+
+        Queue<Integer> zeroQueue = new LinkedList<>();
+        for (int i=0; i<indegrees.length; i++) {
+            if (indegrees[i] == 0) {
+                zeroQueue.offer(i);
+            }
+        }
+        int[] order = new int[numCourses];
+        int index = 0;
+        while (!zeroQueue.isEmpty()) {
+            Integer courseNode = zeroQueue.poll();
+            order[index++] = courseNode;
+            if (graph.containsKey(courseNode)) {
+                for (Integer prerequisite: graph.get(courseNode)) {
+                indegrees[prerequisite]--;
+                if (indegrees[prerequisite]==0) {
+                    zeroQueue.offer(prerequisite);
+                }
+            }
+            }            
+        }
+        if (index == numCourses) {
+            return order;
+        }
+        return new int[0];
 
     }
 }

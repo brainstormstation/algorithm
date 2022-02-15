@@ -20,5 +20,13 @@ public class Code54_StringToIntegerATOITest {
         int expected = 2147483646;
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void test2Convert() {
+        String s = " -0 ";
+        int actual = this.target.atoi2(s);
+        int expected = 2147483646;
+        assertEquals(expected, actual);
+    }
     
 }

@@ -40,4 +40,40 @@ public class Code54_StringToIntegerATOI {
         }
         return res;
     }
+
+    public int atoi2(String s) {
+        // write your code here
+        int flag = 1;
+        char[] arr = s.toCharArray();
+        if (arr.length == 0){
+            return 0;
+        }
+        int index = 0;
+        while (index < s.length() && !Character.isDigit(arr[index]) && arr[index]!='+'&& arr[index]!='-'){
+            index++;
+        }
+        if (arr[index]=='-') {
+            flag = -1;
+            index++;
+        } else if (arr[index] == '+') {
+            index++;
+        }
+        int number = 0;        
+        while (index<s.length() && Character.isDigit(arr[index])) {
+            if (number > Integer.MAX_VALUE/10) {
+                return flag == 1? Integer.MAX_VALUE:Integer.MIN_VALUE;
+            }
+            if (number == Integer.MAX_VALUE/10) {
+                if (flag == 1 && (s.charAt(index)-'0')>7) {
+                    return Integer.MAX_VALUE;
+                }
+                if (flag == -1 && (s.charAt(index)-'0')>8) {
+                    return Integer.MIN_VALUE;
+                }
+            }
+            number = number * 10 + (s.charAt(index)-'0');
+            index++;
+        }
+        return number * flag;
+    }
 }

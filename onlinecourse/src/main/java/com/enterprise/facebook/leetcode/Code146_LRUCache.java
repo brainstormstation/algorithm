@@ -3,86 +3,92 @@ package com.enterprise.facebook.leetcode;
 import java.util.*;
 
 public class Code146_LRUCache {
-    class LRUNode {
-        public int key;
-        public int val;
-        public LRUNode pre;
-        public LRUNode next;
-        public LRUNode (int key, int val) {
+    class ListNode {
+        private int key;
+        private int value;
+        ListNode next;
+        ListNode pre;
+        public ListNode(int key, int value) {
             this.key = key;
-            this.val = val;
+            this.value = value;
         }
     }
-    Map<Integer, LRUNode> map;
-    LRUNode head;
-    LRUNode tail;
+
+    ListNode head;
+    ListNode tail;
     int capacity;
-    
-    public Code146_LRUCache(int capacity) {
+    Map<Integer, ListNode> map;
+
+    /*
+    * @param capacity: An integer
+    */public Code146_LRUCache(int capacity) {
+        // do intialization if necessary
+        this.head = new ListNode(0, 0);
+        this.tail = new ListNode(0, 0);
+        this.head.next = this.tail;
+        this.tail.pre = this.head;
+        this.map = new HashMap<>();
         this.capacity = capacity;
-        map = new HashMap<>();
-        head = new LRUNode(0, 0);
-        tail = new LRUNode(0, 0);
-        head.next = tail;
-        tail.pre = head;
     }
-    
+
+    /*
+     * @param key: An integer
+     * @return: An integer
+     */
     public int get(int key) {
-        LRUNode node = getNode(key);
-        if (node != null) {
-            return node.val;
+        // write your code here
+        if (map.containsKey(key)) {
+            ListNode node = map.get(key);
+            goToTail(node);
+            return node.value;
         }
         return -1;
     }
 
-    public void put(int key, int value) {
-        LRUNode node = getNode(key);
-        if (node != null) {
-            node.val = value;
-            map.put(key, node);
-            return;
-        }
-
-        node = new LRUNode(key, value);
-        map.put(key, node);
-        addToHead(node);
-        if (map.size() > capacity) {
-            removeTail();
-        }
-
-    }
-
-    private void removeTail() {
-        LRUNode node = tail.pre;
-        tail.pre = node.pre;
-        node.pre.next = tail;
-        map.remove(node.key);
-    }
-
-    private void addToHead(LRUNode node) {
-        LRUNode next = head.next;
-        head.next = node;
-        node.next = next;
-        node.pre = head;
-        next.pre = node;
-    }
-
-    private LRUNode getNode(int key) {
+    /*
+     * @param key: An integer
+     * @param value: An integer
+     * @return: nothing
+     */
+    public void set(int key, int value) {
+        // write your code here
         if (map.containsKey(key)) {
-            LRUNode node = map.get(key);
-            if (node.pre != head) {
-                moveToHead(node);
+            ListNode node = map.get(key);
+            goToTail(node);
+            node.value = value;
+        } else {
+            if (map.size() == capacity) {
+                removeLast();
             }
-            return node;
+            ListNode nodeAdd = new ListNode(key, value);
+            goToTail(nodeAdd);
+            map.put(key, nodeAdd);
         }
-        return null;
     }
-    
-    private void moveToHead(LRUNode node) {
-        LRUNode pre = node.pre;
-        LRUNode next = node.next;
-        pre.next = next;
-        next.pre = pre;
-        addToHead(node);
+
+    private void removeLast() {
+        ListNode node = this.head.next;
+        this.head.next = node.next;
+        node.next.pre = this.head;
+        map.remove(node.key);
+        capacity--;
+    }
+
+    private void goToTail(ListNode node) {
+        if (node.next == null) {
+            ListNode cur = this.tail.pre;
+            cur.next = node;
+            node.pre = cur;
+            node.next = this.tail;
+            this.tail.pre = node;
+        } else if (node.next != tail){
+            ListNode pre = node.pre;
+            ListNode next = node.next;
+            pre.next = next;
+            next.pre = pre;
+            node.pre = tail.pre;
+            node.next = tail;
+            tail.pre = node;
+        }
     }
 }
